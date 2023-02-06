@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={darkMode? "App dark" : "App"}>
         <Header switchAsap={switchAsap} darkMode={darkMode} />
         <Search />
         <Cards />

@@ -1,6 +1,6 @@
 import React from 'react'
-// import LightModeIcon from "@mui/icons-material/LightMode";
-// import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const Header = ( {darkMode, switchAsap} ) => {
 
@@ -11,8 +11,8 @@ const Header = ( {darkMode, switchAsap} ) => {
         className={darkMode ? "header__switcher black" : "header__switcher"}
         onClick={switchAsap}
       >
-        {darkMode ? "Yamete Kudasei, onii chan !!" : "Touch Me!"}
-        <img src={darkMode ? DarkModeIcon : LightModeIcon} alt="theme" />
+        {darkMode ? "Again!!!!" : "Touch Me!"}{" "}
+        {darkMode ? <DarkModeIcon /> : <LightModeIcon />}
       </div>
     </div>
   );
