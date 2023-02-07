@@ -81,6 +81,24 @@ body {
   font-weight: 500;
 }
 
+.cards__container {
+  width: 100%;
+  padding: 40px 5%;
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cards__container .card {
+  background-color: rgb(211, 211, 65);
+  border-radius: 10px;
+  padding: 10px;
+  width: 320px;
+  height: 300px;
+  align-self: center;
+}
+
 @media (max-width: 320px) {
   .header {
     padding: 10px;
@@ -101,15 +119,22 @@ body {
   }
 }
 
-
 @media (min-width: 700px) {
   .header {
     padding: 40px 50px;
   }
+
+  .cards__container {
+  padding: 40px 50px;
+}
 }
 
 @media (min-width: 1200px) {
   .header {
     padding: 40px 200px;
   }
+
+  .cards__container {
+  padding: 40px 200px;
+}
 }
