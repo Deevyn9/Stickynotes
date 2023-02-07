@@ -63,7 +63,7 @@ body {
   width: 700px;
   max-width: 90%;
   color: black;
-  margin-top: 40px;
+  margin-top: 20px;
   justify-content: space-between;
   padding-left: 5px;
 }
@@ -105,5 +105,11 @@ body {
 @media (min-width: 700px) {
   .header {
     padding: 40px 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 40px 200px;
   }
 }
