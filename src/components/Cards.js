@@ -9,8 +9,12 @@ const Cards = () => {
     };
 
     const handleButtonClick = () => {
-        setNotes([...notes, inputValue]);
-        setInputValue("");
+        if (inputValue.length >= 3) {
+            setNotes([...notes, inputValue]);
+            setInputValue("");
+        } else {
+
+        }
     };
 
   return (
@@ -29,17 +33,18 @@ const Cards = () => {
 
         <div className="card__bottom">
           <div className="count">
-            <p>200 Remaining</p>
+            <p>{200 - inputValue.length} Remaining</p>
           </div>
           <div className="save">
             <button onClick={handleButtonClick}>save</button>
           </div>
         </div>
       </div>
-
+    
       {notes.map((note, index) => (
         <div key={index} className="card sticky__card">
           <p>{note}</p>
+
         </div>
       ))}
     </div>
