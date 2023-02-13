@@ -104,6 +104,7 @@ body {
 }
 
 .cards__container .card.sticky__card {
+  background-color: rgb(231, 244, 50);
   word-wrap: break-word;
   line-height: 20px;
   font-weight: 700;
