@@ -1,6 +1,18 @@
-import React from 'react'
+import {useState, React} from 'react'
 
 const Cards = () => {
+    const [notes, setNotes] = useState([]);
+    const [inputValue, setInputValue] = useState("");
+
+    const handleInputChange = event => {
+        setInputValue(event.target.value);
+    };
+
+    const handleButtonClick = () => {
+        setNotes([...notes, inputValue]);
+        setInputValue("");
+    };
+
   return (
     <div className="cards__container">
       <div className="card">
@@ -11,17 +23,25 @@ const Cards = () => {
           rows="10"
           placeholder="Let's create a note..."
           maxLength={200}
+          value={inputValue}
+          onChange={handleInputChange}
         ></textarea>
 
         <div className="card__bottom">
-            <div className="count">
-                <p>200 Remaining</p>
-            </div>
-            <div className="save">
-                <button>save</button>
-            </div>
+          <div className="count">
+            <p>200 Remaining</p>
+          </div>
+          <div className="save">
+            <button onClick={handleButtonClick}>save</button>
+          </div>
         </div>
       </div>
+
+      {notes.map((note, index) => (
+        <div key={index} className="card sticky__card">
+          <p>{note}</p>
+        </div>
+      ))}
     </div>
   );
 }

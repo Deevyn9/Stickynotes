@@ -94,12 +94,19 @@ body {
   background-color: rgb(131, 153, 167);
   border-radius: 10px;
   padding: 10px;
-  width: 350px;
+  width: 320px;
   height: 230px;
   align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.cards__container .card.sticky__card {
+  word-wrap: break-word;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .cards__container .card textarea {
