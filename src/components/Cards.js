@@ -12,7 +12,15 @@ const Cards = () => {
           placeholder="Let's create a note..."
           maxLength={200}
         ></textarea>
-        {/* <input type="text" placeholder="Let's create a note..." max={200} min={1}  /> */}
+
+        <div className="card__bottom">
+            <div className="count">
+                <p>200 Remaining</p>
+            </div>
+            <div className="save">
+                <button>save</button>
+            </div>
+        </div>
       </div>
     </div>
   );
