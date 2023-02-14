@@ -10,17 +10,14 @@ const Cards = () => {
   };
 
   const handleButtonClick = () => {
-    
     return inputValue.length >= 3 ? (setNotes([...notes, inputValue]), setInputValue("")) : null;
-    
-    
-    // if (inputValue.length >= 3) {
-    //     setNotes([...notes, inputValue]);
-    //     setInputValue("");
-    // } else {
-    //     null
-    // }
   };
+
+  const handleDelete = (index) => {
+    const newNotes = [...notes];
+    newNotes.splice(index, 1);
+    setNotes(newNotes)
+  }
 
   return (
     <div className="cards__container">
@@ -51,7 +48,7 @@ const Cards = () => {
           <p>{note}</p>
           <div className="date__delete">
             <p>13/02/2022</p>
-            <img src={Delete} alt="delete" width={25} />
+            <img src={Delete} alt="delete" width={25} onClick={() => handleDelete(index)} />
           </div>
         </div>
       ))}
