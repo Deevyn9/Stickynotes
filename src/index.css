@@ -117,6 +117,10 @@ body {
   justify-content: space-between;
 }
 
+.cards__container .card.sticky__card .date__delete img {
+  cursor: pointer;
+}
+
 .cards__container .card textarea {
   padding: 5px;
   width: 100%;
