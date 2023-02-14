@@ -1,5 +1,5 @@
 import { useState, React } from "react";
-import DeleteIcon from "@mui/icons-material/Delete";
+import Delete from "../assets/delete.png"
 
 const Cards = () => {
   const [notes, setNotes] = useState([]);
@@ -10,13 +10,15 @@ const Cards = () => {
   };
 
   const handleButtonClick = () => {
+    
     return inputValue.length >= 3 ? (setNotes([...notes, inputValue]), setInputValue("")) : null;
-    //     setInputValue("");
+    
+    
     // if (inputValue.length >= 3) {
     //     setNotes([...notes, inputValue]);
     //     setInputValue("");
     // } else {
-
+    //     null
     // }
   };
 
@@ -49,7 +51,7 @@ const Cards = () => {
           <p>{note}</p>
           <div className="date__delete">
             <p>13/02/2022</p>
-            <img src={DeleteIcon} alt="delete" />
+            <img src={Delete} alt="delete" width={25} />
           </div>
         </div>
       ))}
