@@ -4,7 +4,8 @@ import Delete from "../assets/delete.png"
 const Cards = () => {
   const [notes, setNotes] = useState([]);
   const [inputValue, setInputValue] = useState("");
-
+  const [date, setDate] = useState(new Date());
+  
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -47,8 +48,13 @@ const Cards = () => {
         <div key={index} className="card sticky__card">
           <p>{note}</p>
           <div className="date__delete">
-            <p>13/02/2022</p>
-            <img src={Delete} alt="delete" width={25} onClick={() => handleDelete(index)} />
+            <p>{date.toLocaleDateString()}</p>
+            <img
+              src={Delete}
+              alt="delete"
+              width={25}
+              onClick={() => handleDelete(index)}
+            />
           </div>
         </div>
       ))}
