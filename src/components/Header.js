@@ -8,11 +8,11 @@ const Header = ( {darkMode, switchAsap} ) => {
     <div className="header">
       <div className="header__name">Sticky</div>
       <div
-        className={darkMode ? "header__switcher black" : "header__switcher"}
+        className={!darkMode ? "header__switcher black" : "header__switcher"}
         onClick={switchAsap}
       >
         {darkMode ? "Again!!!!" : "Touch Me!"}{" "}
-        {darkMode ? <DarkModeIcon /> : <LightModeIcon />}
+        {!darkMode ? <DarkModeIcon /> : <LightModeIcon />}
       </div>
     </div>
   );
