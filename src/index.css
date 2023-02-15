@@ -141,6 +141,10 @@ body {
   line-height: 20px;
 }
 
+.cards__container .card textarea::placeholder {
+  color: rgb(226, 226, 226);
+}
+
 .cards__container .card .card__bottom {
   display: flex;
   align-items: center;
