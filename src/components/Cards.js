@@ -48,7 +48,7 @@ const Cards = () => {
         <div key={index} className="card sticky__card">
           <p>{note}</p>
           <div className="date__delete">
-            <p>{date.toLocaleDateString()}</p>
+            <p>{date.toLocaleDateString('de-DE')}</p>
             <img
               src={Delete}
               alt="delete"
